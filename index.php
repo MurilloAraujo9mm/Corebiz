@@ -16,7 +16,6 @@
 </head>
 
 <body>
-    
     <header class="main-header">
         <div class="container">
             <div class="main-header-content">
@@ -42,7 +41,17 @@
                         </a>
                     </span>
                 </div>
+                <div class="icon-notext icon-align-justify main-menu-mobile-header"></div>
             </div>
+        </div>
+        <div class="main-menu-mobile-content">
+            <ul class="main-itens-ul-footer">
+                <li class="main-itens-li-footer"><a href="#">Avenida Andrômeda, 2000, Bloco 6 e 8</a></li>
+                <li class="main-itens-li-footer"><a href="#">Alphavile SP</a></li>
+                <li class="main-itens-li-footer"><a href="#">brasil@corebiz.ag</a></li>
+                <li class="main-itens-li-footer"><a href="#">+55 11 3090 1039</a></li>
+            </ul>
+            <div class="menu-mobile-close"></div>
         </div>
     </header>
     <main>
@@ -50,6 +59,7 @@
             <div class="main_content_slide j_slide">
                 <a class="j_slide_item" href="#" title=""><img src="themes/web/assets/images/featured-01.jpg" alt="" title="" /></a>
                 <a class="j_slide_item" href="#" title=""><img src="themes/web/assets/images/featured-02.jpg" alt="" title="" /></a>
+                <a class="j_slide_item" href="#" title=""><img src="themes/web/assets/images/featured-03.jpg" alt="" title="" /></a>
                 <a class="j_slide_item" href="#" title=""><img src="themes/web/assets/images/featured-03.jpg" alt="" title="" /></a>
                 <div class="j_slide_nav"></div>
             </div>
@@ -80,7 +90,6 @@
             </div>
         </section>
     </main>
-
     <footer class="main-footer">
         <section class="container">
             <div class="main-itens-footer">
@@ -96,14 +105,14 @@
                         <li class="main-itens-li-footer"><a href="#">+55 11 3090 1039</a></li>
                     </ul>
                 </div>
-                <div class="main-itens-contact-footer">
-                    <div class="icon-headphones my-account-header">
-                        <a href="#">Entre em contato contato</a>
-                    </div>
-                    <div class="icon-envelope-o my-account-header">
-                        <a href="#">Fale com o nosso consultor online</a>
-                    </div>
-                </div>
+                <ul class="main-itens-contact-footer">
+                    <li><span class="icon-mail"></span><a href="#">Entre em contato</a></li>
+                    <li><span class="icon-headphones"></span><a href="#">Fale com o nosso consultor online</a></li>
+                </ul>
+                <ul class="main-itens-logo">
+                    <li><a href="#"><img src="themes/web/assets/images/corebiz -black.jpg"></li>
+                    <li><a href="#"><img src="themes/web/assets/images/corebiz -black.jpg"></a></li>
+                </ul>
         </section>
     </footer>
     <script src="themes/web/assets/scripts/jquery-3.6.0.js"></script>

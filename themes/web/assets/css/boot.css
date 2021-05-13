@@ -274,6 +274,19 @@
     margin: 5px 0px;
 }
 
+/*ICONS NORMALIZE*/
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    position: relative !important;
+    top: .125em !important;
+    margin-right: .4em !important;
+}
+
+.icon-notext:before {
+    top: 0;
+    margin-right: 0 !important;;
+}
+
 /* Error mensagem */
 
 
@@ -295,34 +308,45 @@
     font-weight: bold;
 }
 
-.request-success {
+/** box notify */
 
+.trigger_notify_box{
     position: fixed;
-    width: 16%;
-    height: 90px;
-    margin-right: 10px;
-    background-color: rgb(103, 172, 76);
-    right: 0;
     top: 0;
-    margin-top: 10px;  
-    font-weight: bold;
-    z-index: 999;
-    text-align: center;
-    color: #fff;
-    border-radius: 3px;
-    font-weight: bold;
+    right: 0;
+    width: 320px;
+    max-width: 90%;
+    padding-top: 15px;
+    padding-right: 15px;
+    z-index: 100;
 }
 
-.request-success p {
-    margin-top: 30px;
-}
-
-
-.request-progress {
+.trigger_notify_timer{
     position: absolute;
-    width: 0%;
-    height: 4%;
-    background-color: rgb(85, 233, 0);
-    bottom: 0;
     left: 0;
+    bottom: 0;
+    height: 4%;
+    background: rgba(0,0,0,0.5);
+}
+
+.trigger_notify{
+    position: relative;
+    padding: 20px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.trigger_notify_blue {
+    background-color: #008EC0;
+    color: #FFF;
+}
+
+.trigger_notify_green {
+    background-color: forestgreen;
+    color: #FFF;
 }

@@ -5,7 +5,7 @@ $(function () {
         let timeSlide = 3000;
         let slideNav = '';
 
-        function jSlide() {
+        const coreBizSlide = () => {
 
             $(".j_slide_nav span").removeClass("active");
 
@@ -23,16 +23,15 @@ $(function () {
             }
         }
 
-
         let jSlideTimer = setInterval(function () {
-            jSlide();
+            coreBizSlide();
         }, timeSlide);
 
         $(".j_slide").mouseenter(function () {
             clearInterval(jSlideTimer);
         }).mouseleave(function () {
             jSlideTimer = setInterval(function () {
-                jSlide();
+                coreBizSlide();
             }, timeSlide);
         });
 
@@ -56,11 +55,28 @@ $(function () {
         $(".j_slide_nav").find("span:eq(0)").addClass("active");
     }
 
+    // Menu Mobile 
+    $(".main-menu-mobile-header").click(function () {
+        if ($('.main-menu-mobile-content').css("margin-left") == "-250px") {
+            $('.main-menu-mobile-content').animate({
+                marginLeft: "0px"
+            }, 250);
+        }
+    });
+
+    $(".menu-mobile-close").click(function () {
+        if ($('.main-menu-mobile-content').css("margin-left") == "0px") {
+            $('.main-menu-mobile-content').animate({
+                marginLeft: "-250px"
+            }, 250);
+        }
+    });
+
     // Form newlaster send
 
-    $(".new-laster-form").submit(function (e) {
+    $(".new-laster-form").submit(function (event) {
 
-        e.preventDefault();
+        event.preventDefault();
 
         const newlaster_url = `https://corebiz-test.herokuapp.com/api/v1/newsletter`;
         let first_name = $(this).find(".first_name").val();
@@ -69,6 +85,7 @@ $(function () {
 
         if (first_name == '' && email == '') {
             $(".invalid-input").show().text('Nome e email são obrigatórios');
+
         } else {
             $(".invalid-input").css("display", "none");
         }
@@ -78,29 +95,70 @@ $(function () {
         }
 
         if (first_name != '' && email_valid_regex.test(email) && email != '') {
-            $.ajax({
 
+            $.ajax({
                 url: newlaster_url,
                 contentType: 'application/json',
                 cache: false,
                 method: 'POST',
                 dataType: 'json',
                 data: JSON.stringify({
-                    email: 'heroku@test.co',
-                    name: 'test'
+                    email: email,
+                    name: first_name
                 }),
 
                 success: function (data) {
-
-                    $("body").prepend(` <div class="request-success"><p>${data.message}</p><span class="request-progress"></span> </div>`);
-
-                    $(".request-progress").animate({
-                        width: '100%',
-                    }, 900, function () {
-                        $('.request-success').fadeOut().remove();
-                    });
+                    triggerNotifyApiMessage(data);
                 }
             });
-        } 
+        }
     });
+
+    const triggerNotifyApiMessage = (data) => {
+
+        let set_param_box = {
+            title: data.message,
+            icon: "icon-bell-o",
+            color: "green",
+            timer: 3000
+        };
+
+        let triggerContent = `
+        <div class="trigger_notify trigger_notify_${set_param_box.color}" style="left: 100%; opacity: 0;">
+           <p class="${set_param_box.icon}"> ${ set_param_box.title} </p>
+           <span class='trigger_notify_timer'></span>
+        </div>
+        `;
+
+        if (!$('.trigger_notify_box').length) {
+            $('body').prepend("<div class='trigger_notify_box'></div>");
+        }
+
+        $('.trigger_notify_box').prepend(triggerContent);
+        $('.trigger_notify').stop().animate({
+            'left': '0',
+            'opacity': '1'
+
+        }, 200, function () {
+            $(this).find('.trigger_notify_timer').animate({
+                'width': '100%'
+            }, set_param_box.timer, 'linear', function () {
+                $(this).parent('.trigger_notify').animate({
+                    'left': '100%',
+                    'opacity': '0'
+                }, function () {
+                    $(this).remove();
+                });
+            });
+        });
+
+        $('body').on('click', '.trigger_notify', function () {
+            $(this).animate({
+                'left': '100%',
+                'opacity': '0'
+            }, function () {
+                $(this).remove();
+            });
+        });
+    }
 });
