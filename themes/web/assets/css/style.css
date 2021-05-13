@@ -8,6 +8,17 @@
     --themeColorB: #f64a5f;
 }
 
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    background: #858484;
+}
+::-webkit-scrollbar-thumb {
+    background: #858484;
+}
+
 .main-header {
     display: flex;
     align-items: center;
@@ -17,6 +28,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    position: relative;
 }
 
 /* Logo header  */
@@ -69,7 +81,6 @@
 .my-account-header a {
     margin-left: 10px;
     font-size: 1.2em;
-    
 }
 
 /* .my-account-header-user {
@@ -79,28 +90,25 @@
 
 .my-account-header-user a {
     color: #7A7A7A;
-    
 }
 
 .my-account-header-user:hover .cart-add-itens {
     opacity: 1;
 }
 
-
 .cart-add-itens:before {
-
     content: "";
     display: inline-block;
     vertical-align: middle;
     margin-right: 10px;
     margin-top: -33px;
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-bottom: 5px solid rgb(170, 170, 170);
-    box-shadow: 0px 0px 6px rgb(170, 170, 170);   
-  }
+    box-shadow: 0px 0px 6px rgb(170, 170, 170);
+}
 
 .cart-add-itens {
     position: absolute;
@@ -344,8 +352,8 @@
 .main-footer {
     background-color: #000;
     color: #fff;
-    height: 213px;
-    padding: 30px 0px;
+    min-height: 220px;
+    padding: 20px 0px;
 }
 
 .main-footer ul, li a {
@@ -354,38 +362,104 @@
 
 .main-itens-footer header {
     width: 100%;
+    
 }
 
 .main-itens-footer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
+   
 }
 
 .main-itens-list-footer {
-    flex-basis: 40%;
+    flex-basis: 33.333333333%;
 }
 
 .main-itens-contact-footer {
-    flex-basis: 20%;
+    flex-basis: 147px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
-.main-itens-contact-footer div {
-    width: 100%;
+.main-itens-contact-footer li {
+    width: 195px;
+    height: 40px;
     color: #000;
     background-color: #fff;
-    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    line-height: 1em;
+    margin-bottom: 20px;
+    padding-right: 15px;
+}
+
+.main-itens-contact-footer li a {
+    color: #000;
+    text-align: center;
+    margin: auto;
+}
+.main-itens-contact-footer li span {
+    color: #000;
+    margin-left: 23px;
+}
+
+/** ITENS LOGO FOOTER */
+
+.main-itens-logo  {
+    flex-basis: 33.333333333%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.main-itens-logo  img {
+    margin: 0 auto;
+    width: 100px;
+    margin-right: 50px;
 }
 
 /** API PRODUCTS */
-
 .section-products-image {
     width: 100%;
 }
 
-/** SECTION CARROSEL */
+/** MENU MOBILE */
+.main-menu-mobile-header {
+    position: absolute;
+    width: 22;
+    height: 10px;
+    font-size: 2em;
+    left: 0;
+    top: 50%;
+    margin-top: -22px;
+    z-index: 999!important;
+    cursor: pointer;
 
-.section-products-content {
-    position: relative;
 }
 
+
+.main-menu-mobile-content {
+    position: fixed;
+    background-color: rgb(105, 105, 105);
+    top: 0;
+    height: 100%;
+    width: 250px;
+    margin-left: -250px;
+    z-index: 999;
+    overflow: hidden;
+    overflow-y: auto;
+    box-shadow: 0px 0px 8px rgb(119, 119, 119);
+}
+
+.menu-mobile-close {
+    position: absolute;
+    right: -70%;
+    top: 0;
+    height: 40px;
+    width: 100px;
+    margin-right: 100px;
+    background-color: red;
+   
+}
