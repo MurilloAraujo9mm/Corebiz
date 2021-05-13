@@ -260,3 +260,12 @@
 .icon-headphones:before {
   content: "\2c";
 }
+.icon-envelope:before {
+  content: "\2d";
+}
+.icon-envelope-o:before {
+  content: "\2e";
+}
+.icon-mail:before {
+  content: "\2f";
+}

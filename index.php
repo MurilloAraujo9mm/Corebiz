@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    
     <header class="main-header">
         <div class="container">
             <div class="main-header-content">
@@ -30,10 +31,9 @@
                 </div>
                 <div class="icon-user my-account-header">
                     <div class="my-account-header-user">
-                        <a  href="#">Minha conta</a>
+                        <a href="#">Minha conta</a>
                         <div class="cart-add-itens"></div>
                     </div>
-
                 </div>
                 <div class="account-cart-header">
                     <span class="account-cart-content">
@@ -61,9 +61,7 @@
                     <span class="decorated-border-white"></span>
                 </header>
                 <div class="section-products-content">
-                    <span class="prev">></span>
 
-                    <span class="next"></span>
                 </div>
             </div>
         </section>
@@ -74,10 +72,9 @@
                 </header>
                 <p class="invalid-input"></p>
                 <form class="new-laster-form" action="" method="POST">
-
                     <input class="first_name" type="text" placeholder="Digite seu nome:" name="first_name" />
                     <input class="email" type="text" placeholder="Digite seu email:" name="email" />
-                    <button>Eu quero!</button>
+                    <button class="request-api">Eu quero!</button>
                 </form>
             </div>
             </div>
@@ -100,15 +97,13 @@
                     </ul>
                 </div>
                 <div class="main-itens-contact-footer">
-                    <div>
-                        Entre em contato
-                        <a class="icon-headphones" href="#"></a>
+                    <div class="icon-headphones my-account-header">
+                        <a href="#">Entre em contato contato</a>
                     </div>
-                    <div>
-                        <a class="icon-headphones" href="#">Fale com o nosso consultor online</a>
+                    <div class="icon-envelope-o my-account-header">
+                        <a href="#">Fale com o nosso consultor online</a>
                     </div>
                 </div>
-            </div>
         </section>
     </footer>
     <script src="themes/web/assets/scripts/jquery-3.6.0.js"></script>
