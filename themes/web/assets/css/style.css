@@ -1,0 +1,399 @@
+/*
+    Created on : 12/05/2021, 19:43:45
+    Author : Murillo Araújo
+*/
+
+:root {
+    --themeColorA: #f64a5f;
+    --themeColorB: #f64a5f;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+}
+
+.main-header-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Logo header  */
+
+.logo-tipo-header {
+    flex-basis: 25%;
+}
+
+/* Form search header  */
+
+.search-form-header {
+    flex-basis: 50%;
+    display: flex;
+}
+
+.search-form-header form {
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.search-form-header form input {
+    flex-basis: 778px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #7A7A7A;
+    outline: none;
+    font-size: 1.1em;
+}
+
+.search-form-button {
+    border: none;
+    font-size: 1.2em;
+    background-color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.my-account-header {
+    flex-basis: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1em;
+    transition: 1s;
+}
+
+.my-account-header a {
+    margin-left: 10px;
+    font-size: 1.2em;
+    
+}
+
+.my-account-header-user {
+    position: relative;
+  
+}
+
+.my-account-header-user a {
+    color: #7A7A7A;
+    
+}
+
+.my-account-header-user:hover .cart-add-itens {
+    opacity: 1;
+}
+
+
+.cart-add-itens:before {
+
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-top: -33px;
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid rgb(170, 170, 170);
+    box-shadow: 0px 0px 6px rgb(170, 170, 170);   
+  }
+
+.cart-add-itens {
+    position: absolute;
+    top: 100%;
+    margin-top: 10px;
+    left: 0%;
+    width: 170px;
+    height: 150px;
+    z-index: 999;
+    background-color: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0px 0px 6px rgb(170, 170, 170);
+    opacity: 0;
+}
+
+.seeking-what-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -25px;
+}
+
+.seeking-what-header {
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.seeking-what-fold-one .seeking-what-header h1 {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 40.92px;
+}
+
+.seeking-what-header p {
+    font-weight: 900;
+    font-style: normal;
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.seeking-what-fold-one {
+    flex-basis: 50%;
+    background-color: #000;
+}
+
+.seeking-what-fold-two {
+    width: 100%;
+    flex-basis: 50%;
+    background-image: url('../images//corebiz-rupixen-unsplash.jpg');
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/** ICON CART */
+
+.account-cart-header {
+    margin-left: 10px;
+    position: relative;
+}
+
+.account-cart-content {
+    position: relative;
+}
+
+.account-cart-content a {
+    color: #000;
+}
+
+.account-cart-content .account-cart-number {
+    display: block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-left: 4px;
+    margin-top: -2px;
+    background-color: var( --themeColorB);
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/*SLIDE*/
+
+.j_slide {
+    position: relative;
+}
+
+.j_slide_item {
+    display: none;
+}
+
+.j_slide_item:first-child {
+    display: block;
+}
+
+.j_slide_nav {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.j_slide_nav span {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.4);
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.j_slide_nav span:hover, .j_slide_nav span.active {
+    background: var(--themeColorA);
+}
+
+/* SECTION PRODUCTS */
+
+.section-products {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.section-products-header {
+    flex-basis: 100%;
+}
+
+.section-products-header h1 {
+    font-weight: 900;
+    font-style: normal;
+    font-size: 20px;
+    margin-top: 10px;
+    flex-basis: 100%;
+    margin-top: 20px;
+}
+
+.section-products-item {
+    flex-basis: 22%;
+    margin: 10px 0px;
+    text-align: center;
+    transition: 1s;
+    padding-bottom: 5px;
+}
+
+.section-products-item:hover {
+    background-color: #eee;
+}
+
+.btn-buy {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.section-products-item:hover .btn-buy {
+    opacity: 1;
+}
+
+.section-products-item h1 {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 10px 0px;
+    color: #7A7A7A;
+}
+
+.section-products-item p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 10px 0px;
+    color: #000000;
+}
+
+.section-products-item button {
+    background-color: #000;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 18px;
+    width: 150px;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 8px;
+    outline: none;
+    border: none;
+}
+
+/** */
+
+.new-laster-section {
+    background-color: #F2F2F2;
+    margin: 0px;
+    padding: 30px 0px;
+}
+
+.new-laster-header {
+    background-color: #F2F2F2;
+    text-align: center!important;
+}
+
+/** NEW LASTER FORM */
+
+.new-laster-form {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.new-laster-form input {
+    width: 280px;
+    height: 48px;
+    border-radius: 5px;
+    background-color: #fff;
+    font-weight: 700;
+    font-size: 1em;
+    line-height: 14px;
+    font-style: normal;
+    padding: 10px;
+    outline: none;
+    border: 1px solid rgb(160, 159, 159);
+    border-radius: 4px;
+}
+
+.new-laster-form button {
+    background-color: #000;
+    cursor: pointer;
+    padding: 10px 12px;
+    outline: none;
+    width: 140px;
+    height: 48px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1em;
+}
+
+/** MAIN FOOTER */
+
+.main-footer {
+    background-color: #000;
+    color: #fff;
+    height: 213px;
+    padding: 30px 0px;
+}
+
+.main-footer ul, li a {
+    color: #fff;
+}
+
+.main-itens-footer header {
+    width: 100%;
+}
+
+.main-itens-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.main-itens-list-footer {
+    flex-basis: 40%;
+}
+
+.main-itens-contact-footer {
+    flex-basis: 20%;
+}
+
+.main-itens-contact-footer div {
+    width: 100%;
+    color: #000;
+    background-color: #fff;
+    margin: 10px 0px;
+}
+
+/** API PRODUCTS */
+
+.section-products-image {
+    width: 100%;
+}
+
+/** SECTION CARROSEL */
+
+.section-products-content {
+    position: relative;
+}
+
+.section-products-content .prev {
+    position: absolute;
+    top: 100%;
+    margin-top: 130px;
+    font-size: 3.5em;
+    color: #000;
+}
+
