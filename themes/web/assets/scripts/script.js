@@ -23,7 +23,7 @@ $(function () {
             }
         }
 
-       
+
         let jSlideTimer = setInterval(function () {
             jSlide();
         }, timeSlide);
@@ -52,7 +52,7 @@ $(function () {
                 $(".j_slide_item:eq(" + navigation.index() + ")").fadeIn();
             });
         });
-        
+
         $(".j_slide_nav").find("span:eq(0)").addClass("active");
     }
 
@@ -61,21 +61,46 @@ $(function () {
     $(".new-laster-form").submit(function (e) {
 
         e.preventDefault();
-        
+
+        const newlaster_url = `https://corebiz-test.herokuapp.com/api/v1/newsletter`;
         let first_name = $(this).find(".first_name").val();
         let email = $(this).find(".email").val();
         let email_valid_regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
-        if (first_name == '') {
-            $(".invalid-input").show().text('Por favor, informe seu nome');
+        if (first_name == '' && email == '') {
+            $(".invalid-input").show().text('Nome e email são obrigatórios');
         } else {
             $(".invalid-input").css("display", "none");
         }
 
         if (!email_valid_regex.test(email) && email != '') {
-            $(".invalid-input").show().text('Por favor, informe um email válido');
-        } else {
-            $(".invalid-input").hidden();
+            $(".invalid-input").show().text('Informe um email válido');
         }
+
+        if (first_name != '' && email_valid_regex.test(email) && email != '') {
+            $.ajax({
+
+                url: newlaster_url,
+                contentType: 'application/json',
+                cache: false,
+                method: 'POST',
+                dataType: 'json',
+                data: JSON.stringify({
+                    email: 'heroku@test.co',
+                    name: 'test'
+                }),
+
+                success: function (data) {
+
+                    $("body").prepend(` <div class="request-success"><p>${data.message}</p><span class="request-progress"></span> </div>`);
+
+                    $(".request-progress").animate({
+                        width: '100%',
+                    }, 900, function () {
+                        $('.request-success').fadeOut().remove();
+                    });
+                }
+            });
+        } 
     });
 });

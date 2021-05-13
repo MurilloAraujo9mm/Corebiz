@@ -72,10 +72,10 @@
     
 }
 
-.my-account-header-user {
+/* .my-account-header-user {
     position: relative;
   
-}
+} */
 
 .my-account-header-user a {
     color: #7A7A7A;
@@ -387,13 +387,5 @@
 
 .section-products-content {
     position: relative;
-}
-
-.section-products-content .prev {
-    position: absolute;
-    top: 100%;
-    margin-top: 130px;
-    font-size: 3.5em;
-    color: #000;
 }
 
