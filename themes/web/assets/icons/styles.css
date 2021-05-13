@@ -269,3 +269,12 @@
 .icon-mail:before {
   content: "\2f";
 }
+.icon-star:before {
+  content: "\3a";
+}
+.icon-star-o:before {
+  content: "\3b";
+}
+.icon-star-1:before {
+  content: "\3c";
+}
