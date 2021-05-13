@@ -14,7 +14,6 @@ $(document).ready(function () {
     }).done(function (response) {
 
         if (response) {
-
             $.each(response, function (index, product) {
 
                 let value = product.installments[0] ? product.installments[0].value : null;
@@ -46,21 +45,18 @@ $(document).ready(function () {
 
     const set_start_item = (product_stars) => {
 
-        console.log(product_stars);
         let content_start = "";
-        let start_transparent = '<img class="product-stars" src="themes/web/assets/images/estrela-transplarente.png">';
-        let start_color = '<img class="product-stars" src="themes/web/assets/images/estrela.png">';
         let increment = 1;
         let stars_sum = 0;
     
         while (increment <= product_stars.stars) {
-            content_start += start_color;
+            content_start += '<img class="product-stars" src="themes/web/assets/images/estrela.png">';
             stars_sum += 1; 
             increment++;
         }
 
         for (let index = stars_sum; index < 5; index++) {
-            content_start += start_transparent;
+            content_start += '<img class="product-stars" src="themes/web/assets/images/estrela-transplarente.png">';
         }
     
         return content_start;
