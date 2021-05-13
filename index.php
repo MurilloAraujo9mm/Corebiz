@@ -31,7 +31,6 @@
                 <div class="icon-user my-account-header">
                     <div class="my-account-header-user">
                         <a href="#">Minha conta</a>
-                        <div class="cart-add-itens"></div>
                     </div>
                 </div>
                 <div class="account-cart-header">
@@ -70,9 +69,7 @@
                     <h1>Mais vendidos</h1>
                     <span class="decorated-border-white"></span>
                 </header>
-                <div class="section-products-content">
-
-                </div>
+               
             </div>
         </section>
         <section class="new-laster-section">

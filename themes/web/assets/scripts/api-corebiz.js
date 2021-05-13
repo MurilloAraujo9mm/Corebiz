@@ -16,17 +16,21 @@ $(document).ready(function () {
         if (response) {
 
             $.each(response, function (index, product) {
+
                 let value = product.installments[0] ? product.installments[0].value : null;
                 let quantity = product.installments[0] ? product.installments[0].quantity : null;
+                let stars = product.stars ? product.stars : null;
+                let promotion = quantity ? `<p>ou em ${quantity}x de R$ ${value} </p>` : '';
 
                 $(".section-products").append(`
-                    <div>
+                    <div class="section-products-content">
                         <article class="section-products-item">
                             <img class='section-products-image' src="${product.imageUrl}">
                             <h1>${product.productName}</h1>
-                            <p>Por R$ ${product.price.toFixed(2)}</p>
-                            ${quantity ? `<p>ou em ${quantity}x de R$ ${value} </p>` : '<p> à  vista</p>'}
+                             ${set_start_item(product)}
+                            <p>Por R$ ${product.price.toFixed(2)}</p> ${promotion}
                             <button class="btn-buy" buy-product="true">Comprar</button>
+                            <div class="poligon">OFF</div>
                         </article>
                     </div>
                `);
@@ -35,10 +39,30 @@ $(document).ready(function () {
     });
 
     $("body").on("click", "[buy-product]", function (event) {
-
         buy++;
         let data_product_buy = localStorage.getItem('data_product') !== null ? localStorage.getItem('data_product') : [];
         localStorage.setItem("data_product", JSON.stringify(buy));
     });
 
+    const set_start_item = (product_stars) => {
+
+        console.log(product_stars);
+        let content_start = "";
+        let start_transparent = '<img class="product-stars" src="themes/web/assets/images/estrela-transplarente.png">';
+        let start_color = '<img class="product-stars" src="themes/web/assets/images/estrela.png">';
+        let increment = 1;
+        let stars_sum = 0;
+    
+        while (increment <= product_stars.stars) {
+            content_start += start_color;
+            stars_sum += 1; 
+            increment++;
+        }
+
+        for (let index = stars_sum; index < 5; index++) {
+            content_start += start_transparent;
+        }
+    
+        return content_start;
+    }
 });

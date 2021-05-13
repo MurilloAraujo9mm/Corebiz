@@ -106,9 +106,12 @@ $(function () {
                     email: email,
                     name: first_name
                 }),
-
                 success: function (data) {
                     triggerNotifyApiMessage(data);
+                },
+
+                complete: function () {
+                    console.log("request success")
                 }
             });
         }
@@ -124,10 +127,10 @@ $(function () {
         };
 
         let triggerContent = `
-        <div class="trigger_notify trigger_notify_${set_param_box.color}" style="left: 100%; opacity: 0;">
-           <p class="${set_param_box.icon}"> ${ set_param_box.title} </p>
-           <span class='trigger_notify_timer'></span>
-        </div>
+            <div class="trigger_notify trigger_notify_${set_param_box.color}" style="left: 100%; opacity: 0;">
+            <p class="${set_param_box.icon}"> ${ set_param_box.title} </p>
+            <span class='trigger_notify_timer'></span>
+            </div>
         `;
 
         if (!$('.trigger_notify_box').length) {

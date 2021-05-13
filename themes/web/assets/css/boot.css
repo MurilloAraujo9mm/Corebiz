@@ -347,6 +347,22 @@
 }
 
 .trigger_notify_green {
-    background-color: forestgreen;
+    background-color: rgb(60, 156, 60);
     color: #FFF;
+}
+
+.poligon {
+    position: absolute;
+    width: 40.4px;
+    height: 34.54px;
+    background-color: #F8475F;
+    top: 2%;
+    right: 0;
+    transform: rotate(50deg);
+    overflow: hidden;
+    margin-right: -50px;
+    margin-left: 50px;
+    color: #fff;
+    text-align: left;
+    padding: 0px;
 }
