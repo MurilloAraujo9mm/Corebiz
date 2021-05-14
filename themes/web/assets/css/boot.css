@@ -305,22 +305,14 @@
 /* Error mensagem */
 
 
-.invalid-input {
-    text-align: center!important;
-    width: 100%;
-    color: rgb(185, 27, 27);
-    display: none;
-    margin-top: 10px;  
-    font-weight: bold;
-}
 
 .invalid-input {
     text-align: center!important;
     width: 100%;
     color: rgb(185, 27, 27);
     display: none;
-    margin-top: 10px;  
     font-weight: bold;
+    margin-top: 5px;
 }
 
 /** box notify */
