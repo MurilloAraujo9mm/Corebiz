@@ -198,4 +198,9 @@ $(function () {
         }
     });
 
+
+    const slideProduct = () => {
+        
+    }
+
 });
