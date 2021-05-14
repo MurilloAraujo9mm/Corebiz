@@ -34,10 +34,8 @@
                     </div>
                 </div>
                 <div class="account-cart-header">
-                    <span class="account-cart-content">
-                        <a class="icon-cart-plus" href="#">
-                            <span class="account-cart-number">1</span>
-                        </a>
+                    <span class="icon-cart-plus account-cart-content">
+                        <span class="account-cart-number">1</span>
                     </span>
                 </div>
                 <div class="icon-notext icon-align-justify main-menu-mobile-header"></div>
@@ -69,7 +67,7 @@
                     <h1>Mais vendidos</h1>
                     <span class="decorated-border-white"></span>
                 </header>
-               
+
             </div>
         </section>
         <section class="new-laster-section">
