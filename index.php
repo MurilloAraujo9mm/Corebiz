@@ -12,45 +12,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="icon" href="https://www.corebiz.ag/wp-content/uploads/2020/06/cropped-logo-corebiz-favicon-1-32x32.png" sizes="32x32" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,300;1,700;1,800&display=swap" rel="stylesheet">
-    <title>CoreBiz projeect</title>
+    <title>CoreBiz project | Front-end Developer</title>
 </head>
 
 <body>
     <header class="main-header">
-        <div class="container">
-            <div class="main-header-content">
-                <div class="logo-tipo-header">
-                    <img src="themes/web/assets/images/corebiz-white.jpg">
-                </div>
-                <div class="search-form-header">
-                    <form action="" method="POST">
-                        <input type="text" placeholder="O que está procurando?">
-                        <button class="icon-notext icon-search search-form-button"></button>
-                    </form>
-                </div>
-                <div class="icon-user my-account-header">
-                    <div class="my-account-header-user">
-                        <a href="#">Minha conta</a>
-                    </div>
-                </div>
+        <div class="main-header-content">
+            <div class="logo-type-header">
+                <img src="themes/web/assets/images/Corebiz-.png">
+            </div>
+            <div class="search-form-content-header">
+                <form class="search-form-header" method="POST">
+                    <input type="text" placeholder="O que está procurando?">
+                    <button class="icon-notext icon-search search-form-button"></button>
+                </form>
+            </div>
+            <div class="my-account-header-user">
+                <a class="icon-user" href="#">Minha conta</a>
                 <div class="account-cart-header">
                     <span class="icon-cart-plus account-cart-content">
                         <span class="account-cart-number">1</span>
                     </span>
                 </div>
-                <div class="icon-notext icon-align-justify main-menu-mobile-header"></div>
             </div>
-        </div>
-        <div class="main-menu-mobile-content">
-            <ul class="main-itens-ul-footer">
-                <li class="main-itens-li-footer"><a href="#">Avenida Andrômeda, 2000, Bloco 6 e 8</a></li>
-                <li class="main-itens-li-footer"><a href="#">Alphavile SP</a></li>
-                <li class="main-itens-li-footer"><a href="#">brasil@corebiz.ag</a></li>
-                <li class="main-itens-li-footer"><a href="#">+55 11 3090 1039</a></li>
-            </ul>
-            <div class="menu-mobile-close"></div>
+            <div class="icon-notext icon-align-justify main-menu-mobile-header"></div>
         </div>
     </header>
+    <div class="main-menu-mobile-content">
+        <div class="menu-mobile-close"></div>
+    </div>
     <main>
         <section class="seeking-what-section">
             <div class="main_content_slide j_slide">
@@ -62,14 +52,13 @@
             </div>
         </section>
         <section class="container">
-            <div class="section-products">
-                <header class="section-products-header">
-                    <h1>Mais vendidos</h1>
-                    <span class="decorated-border-white"></span>
-                </header>
-
-            </div>
+            <header class="section-products-header">
+                <h1>Mais vendidos</h1>
+                <span class="decorated-border-white"></span>
+            </header>
+            <div class="section-products"></div>
         </section>
+
         <section class="new-laster-section">
             <div class="new-laster-section-content">
                 <header class="new-laster-header">
