@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="icon" href="https://www.corebiz.ag/wp-content/uploads/2020/06/cropped-logo-corebiz-favicon-1-32x32.png" sizes="32x32" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,300;1,700;1,800&display=swap" rel="stylesheet">
-    <title>CoreBiz project | Front-end Developer</title>
+    <title>CoreBiz Project | Front-end Developer</title>
 </head>
 
 <body>
