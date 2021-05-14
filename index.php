@@ -34,7 +34,7 @@
                     </span>
                 </div>
             </div>
-            <div class="icon-notext icon-align-justify main-menu-mobile-header"></div>
+            <div class="icon-align-justify main-menu-mobile-header"></div>
         </div>
     </header>
     <div class="main-menu-mobile-content">
