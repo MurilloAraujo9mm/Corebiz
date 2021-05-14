@@ -284,3 +284,9 @@
 .icon-times-circle:before {
   content: "\3e";
 }
+.icon-cancel-circled:before {
+  content: "\3f";
+}
+.icon-cancel-squared:before {
+  content: "\40";
+}

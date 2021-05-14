@@ -42,7 +42,7 @@
             <li> <a class="icon-user" href="#">Login</a></li>
             <li> <a class="icon-screen" href="#">Minha conta</a></li>
         </ul>
-        <div class="icon-times menu-mobile-close"></div>
+        <div class="icon-cancel menu-mobile-close"></div>
     </div>
     <main>
         <section class="seeking-what-section">
