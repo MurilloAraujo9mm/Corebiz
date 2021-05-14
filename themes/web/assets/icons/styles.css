@@ -290,3 +290,9 @@
 .icon-cancel-squared:before {
   content: "\40";
 }
+.icon-chevron-left-1:before {
+  content: "\5b";
+}
+.icon-chevron-right:before {
+  content: "\5d";
+}

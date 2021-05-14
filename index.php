@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -59,8 +60,14 @@
                 <h1>Mais vendidos</h1>
                 <span class="decorated-border-white"></span>
             </header>
-            <div class="section-products"></div>
         </section>
+        <span class="icon-chevron-left-1 prev"></span>
+        <div  class="carrosel-product-content">
+            <article class="carrosel">
+            </article>
+        </div>
+        <span class="icon-chevron-right next"></span>
+
         <section class="new-laster-section">
             <div class="new-laster-section-content">
                 <header class="new-laster-header">
@@ -72,7 +79,6 @@
                     <input class="email" type="text" placeholder="Digite seu email:" name="email" />
                     <button class="request-api">Eu quero!</button>
                 </form>
-            </div>
             </div>
         </section>
     </main>
