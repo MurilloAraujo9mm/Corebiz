@@ -164,4 +164,38 @@ $(function () {
             });
         });
     }
+
+    /** Carroseul */
+
+    let width = (parseInt($('.section-products-item .item').outerWidth()) + parseInt($(".section-products-item .item").css("margin-right"))) * $(".section-products-item .item").length;
+
+    $(".section-products").css("width", width);
+
+    let number_images = 3;
+    let padding_and_margin = 16.5;
+    let next_or_prev = 0;
+    let count_itens = ($(".section-products-item .item").length / number_images) - 1;
+
+    let slide_go = (number_images * padding_and_margin) + ($('.section-products-item img').outerWidth()) * number_images;
+
+    $(".next").click(function () {
+
+        if (next_or_prev < count_itens) {
+            next_or_prev++;
+            $(".carrosel").animate({
+                marginLeft: '-=' + slide_go + 'px'
+            }, '500')
+        }
+    });
+
+    $(".prev").click(function () {
+
+        if (next_or_prev >= 1) {
+            next_or_prev--;
+            $(".carrosel").animate({
+                marginLeft: '+=' + slide_go + 'px'
+            }, '500')
+        }
+    });
+
 });

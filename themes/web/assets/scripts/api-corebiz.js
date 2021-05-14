@@ -20,19 +20,19 @@ $(document).ready(function () {
                 let quantity = product.installments[0] ? product.installments[0].quantity : null;
                 let stars = product.stars ? product.stars : null;
                 let promotion = quantity ? `<p>ou em ${quantity}x de R$ ${value} </p>` : '';
-                let off = product.productId == 2 || product.productId == 3 ? `<div class="polygon"><p>off</p></div>` : '';
+                let off = product.productId == 2 || product.productId == 3 ? `<div class="polygon"><p>off</div>` : '';
 
                 $(".section-products").append(`
-                    <div class="section-products-content">
-                        <article class="section-products-item">
-                            <img class='section-products-image' src="${product.imageUrl}">
+                    <article class="section-products-item">
+                        <img class="section-products-image" src="${product.imageUrl}">
+                        <header>
                             <h1>${product.productName}</h1>
-                             ${set_start_item(product)}
-                            <p>Por R$ ${product.price.toFixed(2)}</p> ${promotion}
-                            <button class="btn-buy" buy-product="true">Comprar</button>
-                            ${off}
-                        </article>
-                    </div>
+                        </header>
+                        <p>${set_start_item(product)}</p>
+                        <p>Por R$ ${product.price.toFixed(2)}</p> ${promotion}
+                        <button class="btn-buy" buy-product="true">Comprar</button>
+                        <span>${off}</span>
+                    </article>
                `);
             });
         }
