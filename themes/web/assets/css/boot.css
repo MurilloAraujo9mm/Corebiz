@@ -1,7 +1,21 @@
-/* CONTAINERS */
+:root {
+    --green: #46ceac;
+    --green_h: #35ba9b;
+    --green_l: #61ddbc;
+    --blue: #4fc0e8;
+    --blue_h: #3aadd9;
+    --blue_l: #66d4f1;
+    --yellow: #fdcd56;
+    --yellow_h: #f5b945;
+    --yellow_l: #fbd277;
+    --red: #eb5463;
+    --red_h: #d94452;
+    --red_l: #f76c82;
+}
 
+/* CONTAINERS */
 .container {
-    max-width: 1200px;
+    max-width: 1100px;
     width: 98%;
     margin: 0 auto;
 }
@@ -351,7 +365,7 @@
     color: #FFF;
 }
 
-.poligon {
+/* .poligon {
     position: absolute;
     width: 40.4px;
     height: 34.54px;
@@ -365,4 +379,4 @@
     color: #fff;
     text-align: left;
     padding: 0px;
-}
+} */

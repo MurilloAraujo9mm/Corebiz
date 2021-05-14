@@ -14,13 +14,13 @@ $(document).ready(function () {
     }).done(function (response) {
 
         if (response) {
-
             $.each(response, function (index, product) {
 
                 let value = product.installments[0] ? product.installments[0].value : null;
                 let quantity = product.installments[0] ? product.installments[0].quantity : null;
                 let stars = product.stars ? product.stars : null;
                 let promotion = quantity ? `<p>ou em ${quantity}x de R$ ${value} </p>` : '';
+                let off = product.productId == 2 || product.productId == 3 ? `<div class="polygon"><p>off</p></div>` : '';
 
                 $(".section-products").append(`
                     <div class="section-products-content">
@@ -30,7 +30,7 @@ $(document).ready(function () {
                              ${set_start_item(product)}
                             <p>Por R$ ${product.price.toFixed(2)}</p> ${promotion}
                             <button class="btn-buy" buy-product="true">Comprar</button>
-                            <div class="poligon">OFF</div>
+                            ${off}
                         </article>
                     </div>
                `);
@@ -46,23 +46,20 @@ $(document).ready(function () {
 
     const set_start_item = (product_stars) => {
 
-        console.log(product_stars);
         let content_start = "";
-        let start_transparent = '<img class="product-stars" src="themes/web/assets/images/estrela-transplarente.png">';
-        let start_color = '<img class="product-stars" src="themes/web/assets/images/estrela.png">';
         let increment = 1;
         let stars_sum = 0;
-    
+
         while (increment <= product_stars.stars) {
-            content_start += start_color;
-            stars_sum += 1; 
+            content_start += '<img class="product-stars" src="themes/web/assets/images/estrela.png">';
+            stars_sum += 1;
             increment++;
         }
 
         for (let index = stars_sum; index < 5; index++) {
-            content_start += start_transparent;
+            content_start += '<img class="product-stars" src="themes/web/assets/images/estrela-transplarente.png">';
         }
-    
+
         return content_start;
     }
 });
