@@ -269,12 +269,18 @@
 .icon-mail:before {
   content: "\2f";
 }
-.icon-star:before {
-  content: "\3a";
-}
 .icon-star-o:before {
   content: "\3b";
 }
-.icon-star-1:before {
+.icon-star:before {
+  content: "\3a";
+}
+.icon-times:before {
   content: "\3c";
+}
+.icon-cancel:before {
+  content: "\3d";
+}
+.icon-times-circle:before {
+  content: "\3e";
 }
