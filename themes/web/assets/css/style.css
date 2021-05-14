@@ -306,9 +306,9 @@
     height: 0px;
     position: relative;
     margin: 10% auto;
-    border-right: 80px solid var(--themeColorB);
-    border-bottom: 80px solid #fff;
-    border-left: 80px;
+    border-right: 55px solid var(--themeColorB);
+    border-bottom: 55px solid #fff;
+    border-left: 55px;
     position: absolute;
     right: 0%;
     top: -5%;
@@ -317,9 +317,10 @@
 
 .polygon p {
     font-weight: bold;
-    margin-left: 38px!important;
-    margin-top: 16px!important;
+    margin-left: 26px!important;
+    margin-top: 10px!important;
     color: #fff!important;
+    font-size: 0.8em!important;
 }
 
 .btn-buy {
@@ -572,7 +573,6 @@
         flex-basis: 100%;
         width: 100%;
     }
-   
     .j_slide_item img {
         width: 700px;
         height: 110px;
@@ -594,7 +594,6 @@
     .my-account-header-user a {
         display: none;
     }
-
     .main-menu-mobile-header {
         display: block;
     }
@@ -602,9 +601,38 @@
         padding: 10px;
         font-size: 1.2em;
     }
-
     .logo-type-header {
         flex-basis: 40%;
         margin: 0 auto;
     }
+    .main-itens-footer {
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around!important;
+    }
+
+    .main-itens-ul-footer {
+        margin-bottom: 50px;
+    }
+
+    .main-itens-header-footer {
+        margin: 10px 0px;
+        padding-bottom: 4px;
+    }
+    .main-itens-list-footer {
+        flex-basis: 100%;
+    }
+
+    .main-itens-contact-footer {
+        margin-bottom: 20px;
+    }
+    .main-itens-contact-footer li {
+        flex-basis: 100%;
+    
+    }
+    .main-itens-logo {
+        flex-basis: 78%;
+    }
+   
 }

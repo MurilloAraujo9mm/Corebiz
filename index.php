@@ -77,7 +77,7 @@
     <footer class="main-footer">
         <section class="container">
             <div class="main-itens-footer">
-                <header>
+                <header class="main-itens-header-footer">
                     <h1>localização</h1>
                     <span class="decorated-border-black"></span>
                 </header>
