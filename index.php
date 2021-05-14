@@ -39,7 +39,11 @@
         </div>
     </header>
     <div class="main-menu-mobile-content">
-        <div class="menu-mobile-close"></div>
+        <ul class="main-menu-mobile-list">
+            <li> <a class="icon-user" href="#">Login</a></li>
+            <li> <a class="icon-screen" href="#">Minha conta</a></li>
+        </ul>
+        <div class="icon-times menu-mobile-close"></div>
     </div>
     <main>
         <section class="seeking-what-section">
@@ -58,7 +62,6 @@
             </header>
             <div class="section-products"></div>
         </section>
-
         <section class="new-laster-section">
             <div class="new-laster-section-content">
                 <header class="new-laster-header">

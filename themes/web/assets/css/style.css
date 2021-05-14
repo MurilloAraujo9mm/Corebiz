@@ -307,7 +307,7 @@
     position: relative;
     margin: 10% auto;
     border-right: 55px solid var(--themeColorB);
-    border-bottom: 55px solid #fff;
+    border-bottom: 55px solid #FCFBFC;
     border-left: 55px;
     position: absolute;
     right: 0%;
@@ -502,7 +502,7 @@
 
 .main-menu-mobile-content {
     position: fixed;
-    background-color: rgb(235, 235, 235);
+    background-color: #fff;
     top: 0;
     height: 100%;
     width: 250px;
@@ -511,16 +511,41 @@
     overflow: hidden;
     overflow-y: auto;
     box-shadow: 0px 0px 8px rgb(119, 119, 119);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.main-menu-mobile-list {
+    background-color: #000;
+    flex-basis: 100%;
+    margin-top: 80px;
+}
+
+.main-menu-mobile-list li {
+    padding: 15px;
+    transition: 0.5s;
+}
+
+.main-menu-mobile-list li:hover {
+    background-color:  rgb(34, 34, 34);
+    cursor: pointer;
 }
 
 .menu-mobile-close {
     position: absolute;
-    right: -70%;
-    top: 0;
-    height: 40px;
-    width: 100px;
-    margin-left: 100px;
-    background-color: red;
+    right: 0%;
+    top: 2%;
+    color: #000;
+    font-size: 2em;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.rotate {
+    transition: 1s linear;
+    transform: rotate(180deg);
 }
 
 .product-stars {
@@ -554,18 +579,18 @@
 
 @media (max-width: 492px) {
     body {
-        background-color: #fff !important;
+        background-color: #fff;
     }
     .section-products-content .section-products {
-        justify-content: space-around!important;
-        align-items: flex-end!important;
+        justify-content: space-around!;
+        align-items: flex-end!;
     }
     .section-products-content .new-laster-form {
         padding: 10px;
     }
     .section-products-content .new-laster-form input {
         margin: 5px 0px;
-        width: 80%!important;
+        width: 80%!;
     }
     .search-form-header {
         display: flex;
@@ -609,7 +634,7 @@
         padding: 10px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around!important;
+        justify-content: space-around;
     }
 
     .main-itens-ul-footer {
@@ -632,7 +657,7 @@
     
     }
     .main-itens-logo {
-        flex-basis: 78%;
+        flex-basis: 60%;
     }
    
 }
