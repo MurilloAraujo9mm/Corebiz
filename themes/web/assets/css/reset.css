@@ -1,0 +1,40 @@
+/*
+    Created on : 12/05/2021, 19:40:45
+    Author : Murillo Araújo
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.j_slide_item > img {
+    display: block;
+    max-width: 100%;
+}
+
+img a {
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+embed, video, iframe, iframe[style] {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
