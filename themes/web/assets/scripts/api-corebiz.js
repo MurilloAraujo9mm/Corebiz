@@ -39,23 +39,6 @@ $(document).ready(function () {
         }
     });
 
-    const numberFormat = (number, decimal_places = 2) => {
-
-        let f = null;
-        let decimal
-
-        if (number.substr(2).length <= 2) {
-            f = `${parseFloat(number.substr(0,2))}.${number.substr(2)}`;
-        } else if (number.substr(2).length <= 2) {
-            f = `${parseFloat(number.substr(0,3))}.${number.substr(3)}`;
-        } else {
-            f = `${parseFloat(number.substr(0,3))}.${number.substr(3)}`;
-        }
-
-        return f;
-    }
-
-
     /** Function Carrosel products */
 
     const carrouselOfProducts = () => {
