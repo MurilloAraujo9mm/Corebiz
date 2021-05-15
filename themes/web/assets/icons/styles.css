@@ -296,3 +296,9 @@
 .icon-chevron-right:before {
   content: "\5d";
 }
+.icon-smile-o:before {
+  content: "\5e";
+}
+.icon-frown-o:before {
+  content: "\5f";
+}
