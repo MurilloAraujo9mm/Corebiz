@@ -335,6 +335,10 @@
     width: 100%;
 }
 
+.main-itens-header-footer  {
+    width: 100%;
+}
+
 .main-itens-footer {
     display: flex;
     flex-wrap: wrap;
