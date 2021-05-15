@@ -8,7 +8,7 @@ $(document).ready(function () {
         url: url,
         dataType: "json",
         beforeSend: function (xhr) {
-            xhr.overrideMimeType("text/plain; charset=x-user-defined");
+            xhr.overrideMimeType("text/plain; charset=ut8");
         }
 
     }).done(function (response) {
@@ -22,49 +22,66 @@ $(document).ready(function () {
                 let promotion = quantity ? `<p>ou em ${quantity}x de R$ ${value} </p>` : '';
                 let off = product.productId == 2 || product.productId == 3 ? `<div class="polygon"><p>off</div>` : '';
 
-                $(".carrosel").prepend(`
-                    <div class="section-products-item">
-                        <a class="item" href="#"><img style="margin-right: 0px" class="section-products-image" src="${product.imageUrl}"></a>
-                        <header>
-                        <h1>${product.productName}</h1>
-                        </header>
-                        <p>${set_start_item(product)}</p>
-                        <p>Por R$ ${product.price.toFixed(2)}</p> ${promotion}
-                        <button class="btn-buy" buy-product="true">Comprar</button>
-                        <span>${off}</span>
-                    </div>
-                `);
+                $(".carousel").prepend(`
+                <article class="section-products-item">
+                    <a class="item" href="#"><img class="section-products-image" src="${product.imageUrl}" alt="${product.productName}" title="${product.productName}"></a>
+                    <header>
+                    <h1>${product.productName}</h1>
+                    </header>
+                    <p>${set_start_item(product)}</p>
+                    <p>Por R$ ${product.price.toFixed(2)}</p> ${promotion}
+                    <button class="btn-buy" buy-product="true">Comprar</button>
+                    <span>${off}</span>
+                </article>
+            `);
             });
             carrouselOfProducts();
         }
     });
 
+    const numberFormat = (number, decimal_places = 2) => {
+
+        let f = null;
+        let decimal
+
+        if (number.substr(2).length <= 2) {
+            f = `${parseFloat(number.substr(0,2))}.${number.substr(2)}`;
+        } else if (number.substr(2).length <= 2) {
+            f = `${parseFloat(number.substr(0,3))}.${number.substr(3)}`;
+        } else {
+            f = `${parseFloat(number.substr(0,3))}.${number.substr(3)}`;
+        }
+
+        return f;
+    }
+
+
+    /** Function Carrosel products */
+
     const carrouselOfProducts = () => {
-        let width = (parseInt($('.carrosel .item').outerWidth()) + parseInt($(".carrosel .item").css("margin-right"))) * $(".carrosel .item").length;
-        $(".carrosel").css("width", width);
+        let width = (parseInt($('.carousel .item').outerWidth()) + parseInt($(".carousel .item").css("margin-right"))) * $(".carousel .item").length;
+        $(".carousel").css("width", width);
 
-        let number_images = 3;
-        let padding_and_margin = 80;
+        let number_images = window.innerWidth < 494 ? 1 : 3;
+        let padding_and_margin = window.innerWidth < 494 ? 250 : 100;
         let next_or_prev = 0;
-        let count = ($(".carrosel .item").length / number_images) - 1;
+        let count = ($(".carousel .item").length / number_images) - 1;
 
-        let slide = (number_images * padding_and_margin) + ($('.carrosel img').outerWidth()) * number_images;
+        let slide = (number_images * padding_and_margin) + ($('.carousel img').outerWidth()) * number_images;
 
         $(".next").click(function () {
-
             if (next_or_prev < count) {
                 next_or_prev++;
-                $(".carrosel").animate({
+                $(".carousel").animate({
                     marginLeft: '-=' + slide + 'px'
                 }, '500')
             }
         });
 
         $(".prev").click(function () {
-
             if (next_or_prev >= 1) {
                 next_or_prev--;
-                $(".carrosel").animate({
+                $(".carousel").animate({
                     marginLeft: '+=' + slide + 'px'
                 }, '500')
             }
@@ -77,6 +94,7 @@ $(document).ready(function () {
         localStorage.setItem("data_product", JSON.stringify(buy));
     });
 
+    /** arrow stars on products */
     const set_start_item = (product_stars) => {
 
         let content_start = "";
@@ -91,8 +109,7 @@ $(document).ready(function () {
 
         for (let index = stars_sum; index < 5; index++) {
             content_start += '<img class="product-stars" src="themes/web/assets/images/estrela-transplarente.png">';
-        }
-
+}
         return content_start;
     }
 });

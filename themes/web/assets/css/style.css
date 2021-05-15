@@ -1,7 +1,16 @@
 /*
-    Created on : 12/05/2021, 19:43:45
-    Author : Murillo Araújo
+ *   Created on : 12/05/2021, 19:43:45
+ *   Author : Murillo Araújo
 */
+
+/** FONTS **/
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito-Regular.ttf') format('opentype'), url('../fonts/Nunito-Light.ttf');
+}
+
+/** Color theme **/
 
 :root {
     --themeColorA: #f64a5f;
@@ -441,43 +450,62 @@
 
 /** product item */
 
-.carrosel-product-content {
-    background-color: #fff;
-    margin: 2% auto;
+.content-carousel {
+    
     max-width: 1000px;
     width: 100%;
-    height: 340px;
+    height: 500px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.prev, .next {
+    position: absolute;
+    cursor: pointer;
+    font-size: 2em;
+}
+
+.prev{
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    margin-top: -20px;
+    height: 20px;
+    margin-left: -50px;
+}
+
+.next{
+    position: absolute;
+    right:  0px;
+    top: 50%;
+    margin-top: -20px;
+    height: 20px;
+    margin-right: -55px;
+}
+
+.carousel-product-content {
+    margin: 1% auto;
+    max-width: 1200px;
+    width: 98%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     overflow: hidden;
     position: relative;
-    
 }
 
-.section-products-image {
-    width: 100%!important;
-}
-
-.carrosel {
-    list-style: none;
-}
-
-.next, .prev {
-    color: #000;
-    font-size: 4.4em;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.carrosel {
+.carousel {
     display: flex;
     flex-wrap: nowrap;
-    padding: 0px 15px;
+    padding: 0px 34px 0px 8px;
+    position: relative;
 }
 
 .section-products-item {
     display: flex;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
 }
 
@@ -516,6 +544,14 @@
 .section-products-item:hover {
     background-color: #eee;
 }
+
+
+
+.prev, .next {
+    position: absolute;
+}
+
+
 
 /** POLYGON **/
 
@@ -582,26 +618,6 @@
 .product-stars {
     display: inline-block;
     margin-right: 5px;
-}
-
-.prev, .next {
-    position: absolute;
-    z-index: 999;
-}
-
-.prev {
-    left: 0%;
-    margin-left: 50px;
-    top: 100%;
-    margin-top: -45px;
-    left: 30px;
-}
-
-.next {
-    right:  0%;
-    margin-right: 55px;
-    top: 100%;
-    margin-top: -45px;
 }
 
 .product-stars {
@@ -708,5 +724,10 @@
     }
     .main-itens-logo {
         flex-basis: 60%;
+    }
+
+    .content-carousel {
+        max-width: 250px;
+        width: 83%!important;
     }
 }

@@ -2,7 +2,7 @@ $(function () {
 
     if ($(".j_slide").length) {
 
-        let timeSlide = 3000;
+        const timeSlide = 3000;
         let slideNav = '';
 
         const coreBizSlide = () => {
@@ -79,57 +79,67 @@ $(function () {
         event.preventDefault();
 
         const newlaster_url = `https://corebiz-test.herokuapp.com/api/v1/newsletter`;
+
         let first_name = $(this).find(".first_name").val();
         let email = $(this).find(".email").val();
-        let email_valid_regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        const email_valid_regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
-        if (first_name == '' && email == '') {
-            $(".invalid-input").show().text('Nome e email são obrigatórios');
-
-        } else {
-            $(".invalid-input").css("display", "none");
-        }
-
-        if (!email_valid_regex.test(email) && email != '') {
-            $(".invalid-input").show().text('Informe um email válido');
-        }
-
-        if (first_name != '' && email_valid_regex.test(email) && email != '') {
-
-            $.ajax({
-                url: newlaster_url,
-                contentType: 'application/json',
-                cache: false,
-                method: 'POST',
-                dataType: 'json',
-                data: JSON.stringify({
-                    email: email,
-                    name: first_name
-                }),
-                success: function (data) {
-                    triggerNotifyApiMessage(data);
-                },
-
-                complete: function () {
-                    console.log("request success")
-                }
+        if (first_name == '' || email == '') {
+            triggerNotifyApiMessage({
+                message: "nome e email são obrigatórios",
+                icon: "icon-frown-o",
+                color: "yellow"
             });
+            return;
         }
-    });
 
+        if (!email_valid_regex.test(email)) {
+            triggerNotifyApiMessage({
+                message: "iforme um email válido",
+                icon: "icon-frown-o",
+                color: "red"
+            });
+            return;
+        }
+
+        $.ajax({
+            url: newlaster_url,
+            contentType: 'application/json',
+            cache: false,
+            method: 'POST',
+            dataType: 'json',
+            data: JSON.stringify({
+                email: email,
+                name: first_name
+            }),
+            success: function (data) {
+                triggerNotifyApiMessage({
+                    message: data.message,
+                    icon: "icon-smile-o",
+                    color: "green",
+                });
+            },
+
+            complete: function () {
+                console.log("request success")
+            }
+        });
+
+    });
     const triggerNotifyApiMessage = (data) => {
 
         let set_param_box = {
             title: data.message,
-            icon: "icon-bell-o",
-            color: "green",
-            timer: 3000
+            icon: data.icon,
+            color: data.color,
+            timer: 3000,
+            break: data.break
         };
 
         let triggerContent = `
             <div class="trigger_notify trigger_notify_${set_param_box.color}" style="left: 100%; opacity: 0;">
-            <p class="${set_param_box.icon}"> ${ set_param_box.title} </p>
-            <span class='trigger_notify_timer'></span>
+                <p class="${set_param_box.icon}"> ${ set_param_box.title} </p>
+                <span class='trigger_notify_timer'></span>
             </div>
         `;
 
@@ -164,43 +174,4 @@ $(function () {
             });
         });
     }
-
-    /** Carroseul */
-
-    let width = (parseInt($('.section-products-item .item').outerWidth()) + parseInt($(".section-products-item .item").css("margin-right"))) * $(".section-products-item .item").length;
-
-    $(".section-products").css("width", width);
-
-    let number_images = 3;
-    let padding_and_margin = 16.5;
-    let next_or_prev = 0;
-    let count_itens = ($(".section-products-item .item").length / number_images) - 1;
-
-    let slide_go = (number_images * padding_and_margin) + ($('.section-products-item img').outerWidth()) * number_images;
-
-    $(".next").click(function () {
-
-        if (next_or_prev < count_itens) {
-            next_or_prev++;
-            $(".carrosel").animate({
-                marginLeft: '-=' + slide_go + 'px'
-            }, '500')
-        }
-    });
-
-    $(".prev").click(function () {
-
-        if (next_or_prev >= 1) {
-            next_or_prev--;
-            $(".carrosel").animate({
-                marginLeft: '+=' + slide_go + 'px'
-            }, '500')
-        }
-    });
-
-
-    const slideProduct = () => {
-        
-    }
-
 });
