@@ -15,7 +15,8 @@ $(document).ready(function () {
 
         if (response) {
             $.each(response, function (index, product) {
-
+    
+                console.log(product)
                 let value = product.installments[0] ? product.installments[0].value : null;
                 let quantity = product.installments[0] ? product.installments[0].quantity : null;
                 let stars = product.stars ? product.stars : null;
