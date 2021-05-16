@@ -15,7 +15,8 @@ $(document).ready(function () {
 
         if (response) {
             $.each(response, function (index, product) {
-
+    
+                console.log(product)
                 let value = product.installments[0] ? product.installments[0].value : null;
                 let quantity = product.installments[0] ? product.installments[0].quantity : null;
                 let stars = product.stars ? product.stars : null;
@@ -38,23 +39,6 @@ $(document).ready(function () {
             carrouselOfProducts();
         }
     });
-
-    const numberFormat = (number, decimal_places = 2) => {
-
-        let f = null;
-        let decimal
-
-        if (number.substr(2).length <= 2) {
-            f = `${parseFloat(number.substr(0,2))}.${number.substr(2)}`;
-        } else if (number.substr(2).length <= 2) {
-            f = `${parseFloat(number.substr(0,3))}.${number.substr(3)}`;
-        } else {
-            f = `${parseFloat(number.substr(0,3))}.${number.substr(3)}`;
-        }
-
-        return f;
-    }
-
 
     /** Function Carrosel products */
 
