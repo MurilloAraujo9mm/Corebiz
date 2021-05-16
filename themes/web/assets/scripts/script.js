@@ -95,7 +95,7 @@ $(function () {
 
         if (!email_valid_regex.test(email)) {
             triggerNotifyApiMessage({
-                message: "iforme um email válido",
+                message: "informe um email válido",
                 icon: "icon-frown-o",
                 color: "red"
             });
