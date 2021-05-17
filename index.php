@@ -32,7 +32,7 @@
                 <img src="themes/web/assets/images/Corebiz-.png" alt="logo Corebiz" title="Corebiz">
             </div>
             <div class="search-form-content-header">
-                <form action="/" class="search-form-header" method="POST">
+                <form action="./" class="search-form-header" method="POST">
                     <input type="text" placeholder="O que está procurando?">
                     <button class="icon-notext icon-search search-form-button"></button>
                 </form>
@@ -118,7 +118,7 @@
                         </li>
                     </ul>
                 </div>
-                <ul class="main-itens-contact-footer">
+                <ul class="main-itens-contact-footer flex">
                     <li><span class="icon-mail"></span><a href="#">Entre em contato</a></li>
                     <li><span class="icon-headphones"></span><a href="#">Fale com o nosso consultor online</a></li>
                 </ul>

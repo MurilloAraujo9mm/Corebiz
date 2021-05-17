@@ -72,7 +72,7 @@ $(function () {
             }, 250);
         }
     });
-
+    
     /*
      * REQUEST FOR APIS
      * API NEWLASTER AND API PRODUCTS
@@ -84,8 +84,9 @@ $(function () {
 
         let first_name = $(this).find(".first_name").val();
         let email = $(this).find(".email").val();
-        const email_valid_regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-
+    
+        const validate_email = new RegExp(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/);
+                
         if (first_name == '' || email == '') {
             triggerNotifyApiMessage({
                 message: "nome e email são obrigatórios",
@@ -95,7 +96,7 @@ $(function () {
             return;
         }
 
-        if (!email_valid_regex.test(email)) {
+        if (!validate_email.exec(email)) {
             triggerNotifyApiMessage({
                 message: "informe um email válido",
                 icon: "icon-frown-o",
@@ -284,7 +285,7 @@ $(function () {
             stars_sum += 1;
             increment++;
         }
-
+        
         for (let index = stars_sum; index < 5; index++) {
             content_start += '<img class="product-stars" src="themes/web/assets/images/estrela-transplarente.png">';
         }

@@ -1,5 +1,5 @@
 # Corebiz
-<h1 align="center"> CoreBiz Project |-| Front-end Developer </h1>
+<h1 align="center"> CoreBiz Project | Front-end Developer </h1>
 
 ![Badge](https://img.shields.io/static/v1?label=html5&message=markuplanguage&color=blue&style=for-the-badge&logo=HTML5)
 
@@ -13,6 +13,9 @@
 
 
 ![Badge](https://img.shields.io/static/v1?label=HEROKU&message=HEROKU&color=79589F&style=for-the-badge&logo=HEROKU)
+
+
+![Badge](https://img.shields.io/static/v1?label=webpack&message=webpack&color=79589F&style=for-the-badge&logo=webpack)
 
 
 
@@ -47,6 +50,13 @@ https://developer.mozilla.org/pt-BR/docs/Web/CSS
 <hr>
 
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
+<hr>
+
+https://webpack.js.org/
+<hr>
+
+https://validator.w3.org/
+
 <hr>
 
 ## Como rodar a Aplicação

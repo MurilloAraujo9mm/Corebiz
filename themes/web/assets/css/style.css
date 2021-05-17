@@ -219,13 +219,13 @@
 
 .account-cart-content .account-cart-number {
     display: block;
-    width: 22px;
+    width: 23px;
     height: 22px;
     position: absolute;
     left: 100%;
     top: 0;
-    margin-left: -2px;
-    margin-top: -2px;
+    margin-left: 2px;
+    margin-top: -0px;
     background-color: var( --themeColorB);
     color: #fff;
     border-radius: 50%;
@@ -402,8 +402,8 @@
     width: 22;
     height: 10px;
     font-size: 2em;
-    left: 6%;
-    top: 46%;
+    left: 5%;
+    top: 42%;
     margin-top: -28px;
     cursor: pointer;
     display: none;
@@ -740,5 +740,64 @@
     .content-carousel {
         max-width: 250px;
         width: 83%!important;
+    }
+    .account-cart-header {
+        top: -10px;
+        left: -10px;
+    }
+}
+
+@media (max-width: 474px) {
+    .logo-type-header img {
+        width: 200px;
+        margin-top: 12px;
+    }
+    .btn-buy {
+        opacity: 1;
+    }
+    .main-header {
+        padding: 0px;
+    }
+    .account-cart-header {
+        top: -10px;
+        left: -4px;
+    }
+}
+
+@media (max-width: 870px) {
+    .section-products-content .section-products {
+        justify-content: space-around!;
+        align-items: flex-end!;
+    }
+    .section-products-content .new-laster-form {
+        padding: 10px;
+    }
+    .section-products-content .new-laster-form input {
+        margin: 5px 0px;
+        width: 80%!;
+    }
+    .search-form-header, .search-form-content-header {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 95%;
+        max-width: 95%;
+        margin-bottom: 15px;
+    }
+    .my-account-header-user {
+        position: absolute;
+        right: 40px;
+        top: 50%;
+        margin-top: -28px;
+    }
+    .main-menu-mobile-header {
+        display: block;
+    }
+    .new-laster-section-content {
+        padding: 10px;
+        font-size: 1.2em;
+    }
+    .logo-type-header {
+        flex-basis: 40%;
+        margin: 0% auto;
     }
 }

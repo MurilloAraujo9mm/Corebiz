@@ -302,21 +302,7 @@
     margin-right: 0 !important;;
 }
 
-/* Error mensagem */
-
-
-
-.invalid-input {
-    text-align: center!important;
-    width: 100%;
-    color: rgb(185, 27, 27);
-    display: none;
-    font-weight: bold;
-    margin-top: 5px;
-}
-
 /** box notify */
-
 .trigger_notify_box{
     position: fixed;
     top: 0;
