@@ -18,6 +18,9 @@
 ![Badge](https://img.shields.io/static/v1?label=webpack&message=webpack&color=79589F&style=for-the-badge&logo=webpack)
 
 
+## Validado por https://validator.w3.org/
+
+
 
 ## O que a plataforma é capaz de fazer :checkered_flag:
 
