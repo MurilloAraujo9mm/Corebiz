@@ -60,8 +60,8 @@
             <div class="main_content_slide j_slide">
                 <a class="j_slide_item" href="#" title=""><img src="themes/web/assets/images/featured-01.jpg" alt="slide-one" title="slide-one-carrousel" /></a>
                 <a class="j_slide_item" href="#" title=""><img src="themes/web/assets/images/featured-02.jpg" alt="slide-two" title="slide-two-carrousel" /></a>
-                <a class="j_slide_item" href="#" title=""><img src="themes/web/assets/images/featured-03.jpg"alt="slide-tree" title="slide-tree-carrousel" /></a>
-                <a class="j_slide_item" href="#" title=""><img src="themes/web/assets/images/featured-04.jpg"alt="slide-tree" title="slide-tree-carrousel" /></a>
+                <a class="j_slide_item" href="#" title=""><img src="themes/web/assets/images/featured-03.jpg" alt="slide-tree" title="slide-tree-carrousel" /></a>
+                <a class="j_slide_item" href="#" title=""><img src="themes/web/assets/images/featured-04.jpg" alt="slide-tree" title="slide-tree-carrousel" /></a>
                 <div class="j_slide_nav"></div>
             </div>
         </div>
